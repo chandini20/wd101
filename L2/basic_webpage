@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>India & Its Rich Culture</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 20px;
+        background-color: #f4f4f4;
+      }
+      h1 {
+        color: #d32f2f;
+      }
+      .content {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+      img {
+        width: 100%;
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>India & Its Rich Culture</h1>
+      <p>
+        India is a land of diverse traditions, festivals, languages, and
+        artistic heritage. From classical dance to colorful festivals, every
+        aspect of India's culture is vibrant.
+      </p>
+
+      <h2>Festivals</h2>
+      <p>
+        India celebrates a multitude of festivals, such as Diwali, Holi, Eid,
+        and Pongal.
+      </p>
+      <img
+        src="https://cdn.glitch.global/5c51cbc0-7f0d-4960-9791-699bf5feb5fe/debashis-rc-biswas-dyPFnxxUhYk-unsplash.jpg?v=1748713731083"
+        alt="Diwali Rangoli"
+      />
+
+      <h2>Traditional Clothing</h2>
+      <p>
+        Sarees, dhotis, and turbans are iconic representations of Indian
+        traditional attire.
+      </p>
+      <img
+        src="https://cdn.glitch.global/5c51cbc0-7f0d-4960-9791-699bf5feb5fe/Screenshot%202025-05-31%20231146.png?v=1748713816161"
+        alt="Traditional Saree"
+      />
+
+      <h2>Classical Dance & Music</h2>
+      <p>
+        Bharatanatyam, Kathak, and Carnatic music define India’s artistic soul.
+      </p>
+      <img
+        src="https://cdn.glitch.global/5c51cbc0-7f0d-4960-9791-699bf5feb5fe/7677437.jpg?v=1748713801762"
+        alt="Bharatanatyam Dance"
+      />
+
+      <h2>Spiritual Heritage</h2>
+      <p>
+        India is home to numerous spiritual traditions, including Yoga and
+        Ayurveda.
+      </p>
+      <img
+        src="https://cdn.glitch.global/5c51cbc0-7f0d-4960-9791-699bf5feb5fe/Screenshot%202025-05-31%20231509.png?v=1748713822557"
+        alt="Yoga Practice"
+      />
+    </div>
+  </body>
+</html>
