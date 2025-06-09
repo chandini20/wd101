@@ -1,0 +1,79 @@
+<!-- A minimal UI for filtering flight search results-->
+<!--You have used filters if you have done shopping, or booked tickets, or ordered food online. Filters are very useful in narrowing down the number of items we want to look at in the user interface.-->
+
+<!--Let us look at a narrow slice of filtering functionality common to most flight booking apps.-->
+
+<!--This examples uses HTML & CSS to display a bunch of search results. The user can then filter search results form the browser. We will write JavaScript which make this functionality possible.-->
+
+<!--This small scale example will show you how most applications are implemented at a larger scale.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flights from Bengaluru to Amsterdam</title>
+</head>
+<body>
+
+    <h3>Flights from Bengaluru to Amsterdam</h3>
+
+    <ul id="flights"></ul>
+
+    <div style="display: flex">
+        <!-- 1 stop -->
+        <input type="checkbox" id="stops-1" onchange="toggleStop('one')" />
+        <label for="stops-1">1 stop</label>
+
+        <!-- 2 stops -->
+        <input type="checkbox" id="stops-2" onchange="toggleStop('two')" />
+        <label for="stops-2">2 stops</label>
+    </div>
+
+    <script>
+        let flights = [
+            { airline: "Air India", stops: 0 },
+            { airline: "SriLankan Airlines", stops: 2 },
+            { airline: "British Airways", stops: 1 },
+            { airline: "Etihad Airways", stops: 1 },
+            { airline: "Thai Airways", stops: 2 },
+            { airline: "Singapore Air", stops: 2 },
+            { airline: "Air France", stops: 2 },
+            { airline: "Qatar Airways", stops: 1 },
+            { airline: "Lufthansa", stops: 1 },
+        ];
+
+        // Track selected stop filters
+        let selectedStops = { one: false, two: false };
+
+        // Toggle stop filters based on checkbox state
+        let toggleStop = (key) => {
+            selectedStops[key] = document.getElementById(key === "one" ? "stops-1" : "stops-2").checked;
+            render();
+        };
+
+        // Create flight list items
+        let createListItem = (item) => "<li>" + item.airline + "</li>";
+
+        // Generate HTML list from filtered items
+        let htmlView = (items) => items.map(createListItem).join("\n");
+
+        // Render filtered flights
+        let render = () => {
+            let stopFilters = [];
+            if (selectedStops.one) stopFilters.push(1);
+            if (selectedStops.two) stopFilters.push(2);
+
+            let filtered = stopFilters.length === 0
+                ? flights
+                : flights.filter((item) => stopFilters.includes(item.stops));
+
+            document.getElementById("flights").innerHTML = htmlView(filtered);
+        };
+
+        // Initial render
+        render();
+    </script>
+
+</body>
+</html>
